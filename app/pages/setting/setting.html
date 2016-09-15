@@ -1,0 +1,39 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar headerbar>
+    <ion-title><ion-icon name="construct"></ion-icon> ตั้งค่า</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+ <ion-list>
+    <button ion-item (click)="goListDepartment()">
+      <ion-icon name="person-add" large primary item-left></ion-icon>
+        แผนกผู้ใช้งาน
+    </button>
+
+        <button ion-item (click)="goListAssettype()">
+      <ion-icon name="search" large primary item-left></ion-icon>
+        ประเภทครุภัณฑ์
+    </button>
+            <button ion-item (click)="goListPage()">
+      <ion-icon name="list" large primary item-left></ion-icon>
+        วิธีการได้มา
+    </button>
+            <button ion-item (click)="goListPage()">
+      <ion-icon name="cash" large primary item-left></ion-icon>
+        ประเภทงบ
+    </button>
+            <button ion-item (click)="goListPage()">
+      <ion-icon name="repeat" large primary item-left></ion-icon>
+        สถานะการจำหน่าย
+    </button>
+  </ion-list>
+</ion-content>

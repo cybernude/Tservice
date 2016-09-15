@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NewAssettypePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar headerbar>
+    <ion-title>เพิ่มประเภทครุภัณฑ์</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+    <ion-item>
+      <ion-label floating>ประเภทครุภัณฑ์</ion-label>
+      <ion-input type="text" [(ngModel)]="assettypename" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button (click)="save()" [disabled]="!assettypename">บันทึก</button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

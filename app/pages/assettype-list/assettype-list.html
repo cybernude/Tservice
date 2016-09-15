@@ -1,0 +1,45 @@
+<!--
+  Generated template for the AssettypeListPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar headerbar>
+    <ion-title>ประเภทครุภัณฑ์</ion-title>
+    <ion-toolbar primary>
+    <ion-searchbar (input)="getItems($event)" placeholder="ค้นหา"></ion-searchbar>
+  </ion-toolbar>
+    <ion-buttons end>
+      <button (click)="goNewAssettype()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <ion-list>
+    <ion-list-header>รายชื่อประเภทครุภัณฑ์</ion-list-header>
+    <ion-item-sliding *ngFor="let ast of assettypeList">
+      <ion-item>
+        <h2> <ion-icon name="globe"></ion-icon> {{ ast.assettypename }}</h2>
+      </ion-item>
+      <ion-item-options side="right">
+        <button danger (click)="doRemove(ast.assettype_id)">
+          <ion-icon name="trash"></ion-icon>
+          ลบ
+        </button>
+        <button secondary (click)="edit(ast)">
+          <ion-icon name="create"></ion-icon>
+          แก้ไข
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
